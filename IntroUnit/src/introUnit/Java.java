@@ -6,7 +6,7 @@ public class Java {
 		// TODO Auto-generated method stub
 		System.out.println("What Sport Do I Play? I Play Soccer.");
 		System.out.println("Where Am I From? I Am From China.");
-		System.out.println("When Is My Birthday? 3 days later.");
+		System.out.println("When Is My Birthday? 3 days later.。");
 	}
 
 }
