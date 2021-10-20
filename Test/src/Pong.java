@@ -1,4 +1,5 @@
 // filler code for pong provided by Mr. David
+//Gregory helps me with my restarting and teaches me how to do switching solo and double players
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -14,7 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Pong extends JPanel implements KeyListener {
+public class Pong extends JPanel implements KeyListener {//Basic Set Up variables
 	
 	// constants that are predefined and won't change as the program runs
 	private final int WIDTH = 600, HEIGHT = 600, WINDOW_HEIGHT = 650;
@@ -33,7 +34,7 @@ public class Pong extends JPanel implements KeyListener {
 	private boolean up1, down1, up2, down2; 		// booleans to keep track of paddle movement
 	private boolean solo = false;
 	
-	public void getPoint() {
+	public void getPoint() {//Test if it touches the wall
 		if((yBall>yPaddle1&&yBall<yPaddle1+100)&&(xBall==xPaddle1+PADDLE_WIDTH)) {
 			point1+=1;
 		}
@@ -48,14 +49,14 @@ public class Pong extends JPanel implements KeyListener {
 	
 	
 	// this method moves the ball at each timestep
-	public void move_ball() {
+	public void move_ball() {//Keep it moving
 		xBall+=xBallSpeed;
 		yBall+=yBallSpeed;
 		// your code here //
 	}
 	
 	// this method moves the paddles at each timestep
-	public void move_paddles() {
+	public void move_paddles() {//Solo, double, and basic moving
 		if(down2==true)
 		{
 			yPaddle1+=PADDLE_SPEED;
@@ -85,7 +86,7 @@ public class Pong extends JPanel implements KeyListener {
 	// this method checks if there are any bounces to take care of,
 	// and if the ball has reached a left/right wall it adds to 
 	// the corresponding player's score
-	public void check_collisions() {
+	public void check_collisions() {//check if touches the walls
 		if(yBall<0||yBall+DIAM>600)
 		{
 			yBallSpeed*=-1;
@@ -105,7 +106,7 @@ public class Pong extends JPanel implements KeyListener {
 
 	// defines what we want to happen anytime we draw the game
 	// you simply need to fill in a few parameters here
-	public void paint(Graphics g) {
+	public void paint(Graphics g) {//Draw everything
 		
 		// background color is gray
 		g.setColor(Color.LIGHT_GRAY);
@@ -116,13 +117,15 @@ public class Pong extends JPanel implements KeyListener {
 		g.setColor(Color.green);
 		g.fillRect(xPaddle1,yPaddle1,PADDLE_WIDTH,PADDLE_HEIGHT);
 		
-		g.setColor(Color.green);
+		g.setColor(Color.red);
 		g.fillRect(xPaddle2,yPaddle2,PADDLE_WIDTH,PADDLE_HEIGHT);
 		g.fillOval(xPaddle1,yPaddle1,PADDLE_WIDTH,PADDLE_HEIGHT);
 		// writes the score of the game - you just need to fill the scores in
 		Font f = new Font("Arial", Font.BOLD, 14);
 		g.setFont(f);
 		g.setColor(Color.red);
+		g.setColor(Color.green);
+		
 		g.drawString("P1 Score: "+point1, WIDTH/5, 20);
 		g.drawString("P2 Score: "+point2, WIDTH*3/5, 20);
 		
@@ -131,7 +134,7 @@ public class Pong extends JPanel implements KeyListener {
 
 	// defines what we want to happen if a keyboard button has 
 	// been pressed - you need to complete this
-	public void keyPressed(KeyEvent e) {
+	public void keyPressed(KeyEvent e) {//press keyboard to contrl
 		
 		int keyCode = e.getKeyCode();
 		
@@ -168,7 +171,7 @@ public class Pong extends JPanel implements KeyListener {
 
 	// defines what we want to happen if a keyboard button
 	// has been released - you need to complete this
-	public void keyReleased(KeyEvent e) {
+	public void keyReleased(KeyEvent e) {//release keyboard when something is achieved
 		
 		int keyCode = e.getKeyCode();
 		
@@ -189,7 +192,7 @@ public class Pong extends JPanel implements KeyListener {
 	}
 	
 	// restarts the game, including scores
-	public void restart() {
+	public void restart() {//when pressing restart, put everything into basic setting
 		solo=false;
 		xBall=30;
 		yBall=30;
