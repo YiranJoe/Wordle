@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class WhileLoop {
 
-	public static void number1()//
+	public static void number1()//definite finite
 	{
 		Scanner num=new Scanner(System.in);
 		int num1=num.nextInt();
@@ -23,7 +23,7 @@ public class WhileLoop {
 		}
 	}
 	
-	public static void Log()
+	public static void Log()//definite finite
 	{
 		Scanner num=new Scanner(System.in);
 		double num1=num.nextDouble();
@@ -36,7 +36,7 @@ public class WhileLoop {
 		}
 	}
 	
-	public static void powe()
+	public static void powe()//definite finite
 	{
 		Scanner num=new Scanner(System.in);
 		int num1=num.nextInt();
@@ -56,7 +56,7 @@ public class WhileLoop {
 		}
 	}
 	
-	public static void bigges() 
+	public static void bigges()// definite finite
 	{
 		Scanner num=new Scanner(System.in);
 		int n=num.nextInt();

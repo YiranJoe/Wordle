@@ -4,7 +4,7 @@ public class ForLoop {
 	
 	private Scanner in = new Scanner(System.in);
 	
-public static void OVER() {//definite finite other
+public static void OVER() {//definite finite linear
 	Scanner num=new Scanner(System.in);
 	double num2=num.nextDouble();
 	double n=35;
@@ -20,7 +20,7 @@ public static void OVER() {//definite finite other
 	
 }
 
-public static void NEGATIVE()//definite finite constant
+public static void NEGATIVE()//definite finite linear
 {
 	Scanner num=new Scanner(System.in);
 	int n=num.nextInt();
@@ -30,7 +30,7 @@ public static void NEGATIVE()//definite finite constant
 	}
 }
 
-public static void Fact()//definite finite constant
+public static void Fact()//definite finite linear
 {
 	Scanner num=new Scanner(System.in);
 	int n=num.nextInt();
@@ -42,7 +42,7 @@ public static void Fact()//definite finite constant
 	System.out.println(sum);
 }
 
-public static void game()//definite finite other
+public static void game()//definite finite linear
 {
 	System.out.println("Do you want to keep playing?");
 	Scanner num=new Scanner(System.in);
@@ -75,7 +75,7 @@ public static void least()//definite finite linear
 	
 }
 
-public static void greatest()
+public static void greatest()//definite finite linear
 {
 	Scanner num=new Scanner(System.in);
 	double num1=num.nextDouble();

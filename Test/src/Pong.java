@@ -124,7 +124,6 @@ public class Pong extends JPanel implements KeyListener {//Basic Set Up variable
 		Font f = new Font("Arial", Font.BOLD, 14);
 		g.setFont(f);
 		g.setColor(Color.red);
-		g.setColor(Color.green);
 		
 		g.drawString("P1 Score: "+point1, WIDTH/5, 20);
 		g.drawString("P2 Score: "+point2, WIDTH*3/5, 20);
