@@ -1,7 +1,7 @@
 
 public class NestedLoopPractice {
 
-	public void Alphabet()
+	public void Alphabet()//constant
 	{
 		for(int i=65;i<91;i++)
 		{
@@ -9,7 +9,7 @@ public class NestedLoopPractice {
 		}
 	}
 	
-	public void table()
+	public void table()//constant
 	{
 		for(int i=1;i<=12;i++)
 		{
@@ -21,7 +21,7 @@ public class NestedLoopPractice {
 		}
 	}
 	
-	public void prime(int n)
+	public void prime(int n)//linear
 	{
 		System.out.println(2);
 		int prim;
@@ -42,7 +42,7 @@ public class NestedLoopPractice {
 		}
 	}
 	
-	public void star(int n)
+	public void star(int n)//linear
 	{
 		for(int i=1;i<=n;i++)
 		{
