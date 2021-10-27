@@ -37,9 +37,17 @@ public class Pong extends JPanel implements KeyListener {//Basic Set Up variable
 	public void getPoint() {//Test if it touches the wall
 		if((yBall>yPaddle1&&yBall<yPaddle1+100)&&(xBall==xPaddle1+PADDLE_WIDTH)) {
 			point1+=1;
+			if(point1==10&point2%2==0)
+			{
+				point2=0;
+			}
 		}
 		else if((yBall>yPaddle2&&yBall<yPaddle2+100)&&(xBall==xPaddle2)){
 			point2+=1;
+			if(point2%4==0)
+			{
+				point2++;
+			}
 		}
 	}
 	
