@@ -6,9 +6,9 @@ import javax.swing.JPanel;
 
 public class FallingBlocksFiller extends JPanel {
 	
-	private int WIDTH = 800, HEIGHT = 600, NUMBLOCKS = 50;
+	private int WIDTH = 800, HEIGHT = 600, NUMBLOCKS = 100;
 	
-	private int RecWidth=20;
+	private int RecWidth=50;
 
 	// instance variables (what kind of data structure should we use?)
 	int[] blockX=new int[NUMBLOCKS];
@@ -34,7 +34,7 @@ public class FallingBlocksFiller extends JPanel {
 		}
 		for(int i=0;i<NUMBLOCKS;i++)
 		{
-			blockSpeed[i]=(int)(Math.random()*5+2);
+			blockSpeed[i]=(int)(Math.random()*10+2);
 			color[i] = new Color((int)(Math.random()*254+1),(int)(Math.random()*254+1),(int)(Math.random()*254+1));
 			
 		}
@@ -47,11 +47,11 @@ public class FallingBlocksFiller extends JPanel {
 		// your code here
 		for(int i=0;i<NUMBLOCKS;i++) {
 			blockY[i]+=blockSpeed[i];
-			if(blockY[i]==HEIGHT)
+			if(blockY[i]>=HEIGHT)
 			{
 				blockX[i]=(int)(Math.random()*(WIDTH-RecWidth)+0);
 				blockY[i]=0;
-				blockSpeed[i]=(int)(Math.random()*5+2);
+				blockSpeed[i]=(int)(Math.random()*10+2);
 				color[i] = new Color((int)(Math.random()*254+1),(int)(Math.random()*254+1),(int)(Math.random()*254+1));
 			}
 		}
@@ -66,7 +66,7 @@ public class FallingBlocksFiller extends JPanel {
 		// color the rectangles blue - you can change this
 		for(int i=0;i<NUMBLOCKS;i++) {
 			g.setColor(color[i]);
-			g.fillOval(blockX[i],blockY[i],RecWidth,RecWidth);
+			g.fillRect(blockX[i],blockY[i],RecWidth,RecWidth);
 		}
 		// draw your rectangles here! 
 		
