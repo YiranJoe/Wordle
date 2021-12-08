@@ -1,8 +1,8 @@
 // Filler code for Whack a Mole by Mr. Friedman: THANK YOU Mr.Friedman
 //ATTENTION:
 /*
- if the user clicks shark, the points will minus 2; if the user clicks the dolphin, the points will add 1; 
- if the user clicks the eagle, it there will be 5 points: however, each eagle only appear once!
+ if the user clicks shark, the points will minus 2; if the user clicks dolphin, the points will add 1; 
+ if the user clicks the eagle, there will be 5 points added: however, each eagle only appear once!
  the goal of the game is to reach 30 points! however you can keep playing if it exceeds 30 points
  NOTE: if the user clicks too many sharks, there will be consequences!
  */
@@ -284,7 +284,8 @@ public class WhackAMoleFiller {
     	//reset the game by setting everything back to original values
     	win=false;
     	TIMESTEP=3000;
-    	sharkNum=2;
+    	NUMEXTRA=2;
+    	NUMAPPEARING=2;
     	score=0;//reset the score
     	//reset the locations of moles
 		for(int i=0;i<NUMMOLES;i++)
