@@ -37,6 +37,10 @@ public class Garage {
 		}
 	}
 	
+	public String toString() {
+		for()
+	}
+	
 	public static void main(String[] args) {
 		Garage g=new Garage(3);
 		Garage f=new Garage(5);
