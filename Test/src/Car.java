@@ -5,7 +5,6 @@ public class Car {
 	private int year;
 	private String name;
 	
-	
 	public Car(String name, int year, int mileAge) {
 		this.name=name;
 		this.year=year;
@@ -23,4 +22,5 @@ public class Car {
 	public int getMileAge() {
 		return mileAge;
 	}
+	
 }

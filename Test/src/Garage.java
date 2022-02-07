@@ -14,32 +14,39 @@ public class Garage {
 	public void totalWorth() {
 		int totalWorthNum=0;
 		for(int i=0;i<garage.length;i++) {
-			totalWorthNum+=garage[i].worth();
+			if(garage[i]!=null) {
+				totalWorthNum+=garage[i].worth();
+			}
 		}
 		System.out.println("It is totally "+totalWorthNum+" dollars");
 	}
 	
 	public void averageMileAge() {
 		double sum=0;
+		double count=0;
 		for(int i=0;i<garage.length;i++) {
-			sum+=garage[i].getMileAge();
+			if(garage[i]!=null) {
+				sum+=garage[i].getMileAge();
+				count++;
+			}
 		}
-		System.out.println(sum/garage.length+" is the average Mile Age");
+		System.out.println(sum/count+" is the average Mile Age");
 	}
 	
 	public void drive(int i, int distance) {
-		garage[i].drive(distance);
+		if(garage[i]!=null) {
+			garage[i].drive(distance);
+		}
 	}
 	
 	public void getEachMileAge() {
 		for(int i=0;i<garage.length;i++) {
-			System.out.println(garage[i].getMileAge());
+			if(garage[i]!=null) {
+				System.out.println(garage[i].getMileAge());
+			}
 		}
 	}
 	
-	public String toString() {
-		for()
-	}
 	
 	public static void main(String[] args) {
 		Garage g=new Garage(3);
