@@ -2,34 +2,36 @@
 public class BankAccount {
 	
 	private String userName;
-	private int money;
-	private double interestRate;
+	private double money;
 
-	public BankAccount(String userName,int money, double interestRate) {
+	public BankAccount(String userName,double money) {
 		this.userName=userName;
 		this.money=money;
-		this.interestRate=interestRate;
 	}
 	
-	public int getMoney() {
+	public BankAccount(String userName) {
+		this.userName=userName;
+		money=0;
+	}
+	
+	public double getMoney() {
 		return money;
 	}
 	
-	public BankAccount(String userName,double interestRate) {
-		this.userName=userName;
-		this.interestRate=interestRate;
+	public String getName() {
+		return userName;
 	}
 	
-	public void deposit(int n) {
+	public void deposit(double n) {
 		money+=n;
 	}
 	
-	public void withDraw(int n) {
+	public void withDraw(double n) {
 		money-=n;
 	}
 	
-	public void addInterest() {
-		money+=interestRate*money;
+	public void display() {
+		System.out.println("there are "+money+" dollars in "+userName+"'s account");
 	}
 	
 	public String toString() {
@@ -37,14 +39,10 @@ public class BankAccount {
 	}
 	
 	public static void main(String[] args) {
-		BankAccount Yiran=new BankAccount("Yiran",10,0.1);
-		Yiran.addInterest();
+		BankAccount Yiran=new BankAccount("Yiran",10);
+
 		Yiran.deposit(10);
-		Yiran.withDraw(21);
-		System.out.println(Yiran);
-		BankAccount Condy=new BankAccount("Condy",0.1);
-		Condy.deposit(10);
-		Condy.addInterest();
-		System.out.println(Condy);
+		Yiran.withDraw(15);
+		Yiran.display();
 	}
 }
