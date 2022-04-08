@@ -10,6 +10,8 @@ public class LinkedList_Test<Q> {
 			list.add(i);
 		}//list should be 01234567
 		System.out.println(list.toString());
+		System.out.println(list.size());
+		System.out.println(list.length());
 		list.add(9);//list should be 012345679
 		System.out.println(list.toString());
 		System.out.println(list.get(8));//print 9 since it is the content of index 9
@@ -20,6 +22,7 @@ public class LinkedList_Test<Q> {
 		list.remove(0);//list should be 0123435679
 		System.out.println(list.toString());
 		list.remove(2);//list should be 0131435679
-		System.out.println(list.toString());
+		System.out.println(list);
+		
 	}
 }

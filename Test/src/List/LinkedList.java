@@ -45,16 +45,38 @@ public class LinkedList<Q> {
 		}
 	}
 	
-	public void remove(int index) {
+	public int size() {
 		Node curr=head;
-		if(index==0) {
-			head=head.next;;
-		}else {
-			for(int i=0;i<index-1;i++) {
-				curr=curr.next;
+		int count=0;
+		while(curr!=null) {
+			count++;
+			curr=curr.next;
+		}
+		return count;
+	}
+	
+	public int length() {
+		return size();
+	}
+	
+	public Q remove(int index) {
+		Q storedInfo;
+		try {
+			Node curr=head;
+			if(index==0) {
+				storedInfo=head.info;
+				head=head.next;
+			}else {
+				for(int i=0;i<index-1;i++) {
+					curr=curr.next;
+				}
+				storedInfo=curr.next.info;
+				Node curr2=curr.next.next;
+				curr.next=curr2;
 			}
-			Node curr2=curr.next.next;
-			curr.next=curr2;
+			return storedInfo;
+		}catch(NullPointerException e) {
+			throw new IndexOutOfBoundsException();
 		}
 	}
 	
@@ -71,12 +93,14 @@ public class LinkedList<Q> {
 	}
 	
 	public String toString() {
-		String a="";
+		String a="[";
 		Node curr=head;
 		while(curr!=null) {
 			a+=curr.info;
+			a+=",";
 			curr=curr.next;
 		}
+		a+="End]";
 		return a;
 	}
 	
