@@ -104,4 +104,18 @@ public class LinkedList<Q> {
 		return a;
 	}
 	
+	public int josephus(int size) {
+		LinkedList<Integer> list=new LinkedList<Integer>();
+		for(int i=0;i<size;i++) {
+			list.add(i);
+		}
+		int curr=0;
+		while(list.size()>1) {
+			list.remove((curr+1)%size);
+			curr++;
+			System.out.println(list);
+		}
+		return list.get(0);
+	}
+	
 }
