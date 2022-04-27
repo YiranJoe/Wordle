@@ -73,9 +73,9 @@ public class moreWithMaps {
         return ans;
 	}
 	
-	public static void MostCommonWord() throws Exception{
+	public static void MostCommonWord(String FileName) throws Exception{
 		HashMap<String,Integer> map=new HashMap<>();
-		BufferedReader in=new BufferedReader(new FileReader("perfect"));
+		BufferedReader in=new BufferedReader(new FileReader(FileName));
 		String sentence=in.readLine();
 		while(sentence!=null) {
 			String[] list=sentence.split(" ");
@@ -115,7 +115,7 @@ public class moreWithMaps {
 		companies.put("CondyPhoneShop", 5000);
 //		companies(companies);
 //		System.out.println(MorseCode("Gregory is my friend".toLowerCase()));
-		MostCommonWord();
+		MostCommonWord("perfect");
 	}
 	
 }
