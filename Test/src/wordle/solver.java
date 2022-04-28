@@ -3,6 +3,19 @@ import java.io.*;
 import java.util.*;
 public class solver {
 
+	//the hint can be separated into 3 different symbol
+	//- means it is grey
+	//x means it is yellow
+	//any other letter means green
+	/*
+	 * for example: when enter "hello", 
+	 * it is grey, green, grey, grey, yellow
+	 * input the hint "- a - - x"(you have to include the space!)
+	 * it gives you the remaining options for the words
+	 * repeat 1-4
+	 * GOOD LUCK WITH WORDLE
+	 */
+	
 	public static ArrayList<Character> ban=new ArrayList<>();
 	public static ArrayList<Character> contain=new ArrayList<>();
 	public static Scanner io=new Scanner(System.in);
