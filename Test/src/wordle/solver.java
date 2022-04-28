@@ -69,23 +69,6 @@ public class solver {
 			}
 		}
 		
-//		for(int i=0;i<contain.size();i++) {
-//			for(int j=0;j<list.size();j++) {
-//				if(list.get(j).indexOf(contain.get(i))==-1) {
-//					list.remove(j);
-//					j--;
-//				}
-//			}
-//		}
-		
-//		for(int index:sure.keySet()) {
-//			for(int i=0;i<list.size();i++) {
-//				if(list.get(i).charAt(index)!=sure.get(index)) {
-//					list.remove(i);
-//					i--;
-//				}
-//			}
-//		}
 		for(int index:unsure.keySet()) {
 			for(int i=0;i<list.size();i++) {
 				if(list.get(i).charAt(index)==unsure.get(index)) {
@@ -94,7 +77,7 @@ public class solver {
 				}
 			}
 		}
-//	
+
 		
 		System.out.println(list);
 	}
